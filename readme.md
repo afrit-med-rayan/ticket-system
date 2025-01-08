@@ -11,3 +11,12 @@ cd /var/www/html/my-laravel-app   #to enter the laravel env
 php artisan migrate      #to push the migration
 
 docker-compose up --build      #to build and run the app
+chmod -R 775 /var/www/html/my-laravel-app/storage /var/www/html/my-laravel-app/bootstrap/cache
+
+chown -R www-data:www-data /var/www/html/my-laravel-app/storage /var/www/html/my-laravel-app/bootstrap/cache
+ls -ld /var/www/html/my-laravel-app/storage /var/www/html/my-laravel-app/bootstrap/cache
+
+chown -R www-data:www-data /var/www/html/my-laravel-app
+
+chcon -R -t httpd_sys_rw_content_t /var/www/html/my-laravel-app/storage /var/www/html/my-laravel-app/bootstrap/cache
+chmod -R 755 /var/www/html/my-laravel-app/public
