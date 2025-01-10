@@ -10,6 +10,8 @@ docker exec -it laravel-ticket-system-app bash #to access to the app env
 php artisan migrate      #to push the migration
 
 docker-compose up --build      #to build and run the app
+
+#to access to the data files
 chmod -R 775 /var/www/html/my-laravel-app/storage /var/www/html/my-laravel-app/bootstrap/cache
 
 chown -R www-data:www-data /var/www/html/my-laravel-app/storage /var/www/html/my-laravel-app/bootstrap/cache
