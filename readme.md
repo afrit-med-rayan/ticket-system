@@ -23,3 +23,5 @@ chcon -R -t httpd_sys_rw_content_t /var/www/html/my-laravel-app/storage /var/www
 chmod -R 755 /var/www/html/my-laravel-app/public
 
 docker exec -it laravel-ticket-system-app php artisan key:generate
+php artisan db:seed
+php artisan migrate:rollback
