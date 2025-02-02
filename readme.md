@@ -24,4 +24,5 @@ chmod -R 755 /var/www/html/my-laravel-app/public
 
 docker exec -it laravel-ticket-system-app php artisan key:generate
 php artisan db:seed
+#to roll back the database
 php artisan migrate:rollback
